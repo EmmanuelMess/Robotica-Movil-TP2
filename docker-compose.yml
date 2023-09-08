@@ -1,0 +1,20 @@
+version: "2.3"
+
+services:      
+  simulation:
+    container_name: simulation_env
+    build:
+      context: ./docker
+      dockerfile: simulation.Dockerfile
+    tty: true
+    environment:
+      DISPLAY: ${DISPLAY}
+      QT_X11_NO_MITSHM: 1
+      XAUTHORITY: /tmp/.docker.xauth
+      ROS_MASTER_URI: http://rosmaster:11311
+    volumes:
+      - ./src:/catkin_ws/src
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /tmp/.docker.xauth:/tmp/.docker.xauth
+    ports:
+      - "11345:11345"
