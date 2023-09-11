@@ -28,3 +28,7 @@ source /opt/ros/humble/setup.bash
 cd /home/
 python3 dump_odom.py > log.txt
 ```
+Por ultimo, sacamos el log.txt del container al host
+```bash
+docker container cp simulation_env:/home/log.txt /home/XXXXX/Desktop/
+```
