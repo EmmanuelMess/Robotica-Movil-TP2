@@ -8,7 +8,7 @@ El container no tiene el PIP ni los paquetes transforms3d como el ros-humble-tra
 ```bash
 sudo apt install python3-pip
 sudo pip3 install transforms3d
-sudo apt install ros-galactic-tf-transformations
+sudo apt install ros-humble-tf-transformations
 ```
 
 Iniciamos el container y corremos la simulacion 
