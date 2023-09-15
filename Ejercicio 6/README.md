@@ -22,3 +22,9 @@ python3 dump_odom.py > logcircular.txt
 
 Antes de esto movimos el robot abajo de la columna central mirando a la derecha. La publicacion constante del topico hace que el 
 robot vaya en sentido antihorario alrededor de la columna central
+
+4) 
+```bash
+python3 -m pip install -r requirements.txt
+
+```
