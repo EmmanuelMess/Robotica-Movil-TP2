@@ -10,21 +10,22 @@ ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False
 ```
 2)En una segunda terminal descargamos y corremos el teleop para la distro humble
 ```bash
-source /opt/ros/humble/setup.bash
-ros2 topic pub /cmd_vel geometry_msgs/Twist '{linear:  {x: 0.5, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 1.0}}'
+sudo apt-get update
+sudo apt-get install ros-humble-teleop-twist-keyboard
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 3)En una tercera terminal iniciamos la recoleccion de los odom logs en el archivo logdinamico.txt
 ```bash
 cd /home
-touch logcircular.txt
-python3 dump_odom.py > logcircular.txt
+touch logdinamico.txt
+python3 dump_odom.py > logdinamico.txt
 ```
 
-Antes de esto movimos el robot abajo de la columna central mirando a la derecha. La publicacion constante del topico hace que el 
-robot vaya en sentido antihorario alrededor de la columna central
+Una vez hecho esto empezamos a usar el teleop y vemos como en gazebo como en rviz el turtlebot se mueve ggwp
 
-4) 
+4) En esta carpeta ejecutamos
 ```bash
+python3 -m venv venv
 python3 -m pip install -r requirements.txt
-
+jupyter-notebook
 ```
