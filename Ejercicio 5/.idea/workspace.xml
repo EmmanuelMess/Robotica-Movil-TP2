@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca635aa-2123-446c-94df-aec0582bf051" name="Changes" comment="" />
+    <list default="true" id="1ca635aa-2123-446c-94df-aec0582bf051" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Ejercicio 6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio 6/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,13 +33,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/emmanuel/Documentos/Facultad/Robotica Movil/TP2/codigo/Ejercicio 5"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,6 +51,7 @@
       <updated>1694800766763</updated>
       <workItem from="1694800771159" duration="6653000" />
       <workItem from="1694809150124" duration="968000" />
+      <workItem from="1694956450568" duration="391000" />
     </task>
     <servers />
   </component>
