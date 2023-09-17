@@ -33,9 +33,3 @@ Por ultimo, sacamos el log.txt del container al host
 docker container cp simulation_env:/home/log.txt /home/XXXXX/Desktop/
 ```
 
-4) En esta carpeta ejecutamos
-```bash
-python3 -m venv venv
-python3 -m pip install -r requirements.txt
-jupyter-notebook
-```
