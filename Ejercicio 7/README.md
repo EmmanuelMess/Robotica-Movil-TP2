@@ -29,3 +29,19 @@ python3 -m venv venv
 python3 -m pip install -r requirements.txt
 jupyter-notebook
 ```
+
+## Comandos ros2 topic pub para el camino cuadrado
+En el apartado D del ejercicio sabiendo que la velocidad lineal del robot iba a ser 0.1 m/s en las rectas y al girar la angular iba a ser de pi/20 en yaw. Entonces en las rectas
+el robot tendria que viajar 20 seg y al momento de girar lo tendria que hacer por 10 seg. Eso en un mundo ideal con un ratio 1:1 entre el tiempo real y el simulado. Lo que hicimos
+es agregarle a esos tiempos ideales un promedio del ratio que teniamos entre ambos tiempos (porque el --keep-alive X actua sobre X tiempo real). Debemos admitir  que fue un poco 
+rudimentario el ajuste porque no siempre el ratio se mantiene:
+```bash
+ros2 topic pub --once --keep-alive 23 /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}'; 
+ros2 topic pub --once --keep-alive 11.5 /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.157079633}}'; 
+ros2 topic pub --once --keep-alive 23 /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}';
+ros2 topic pub --once --keep-alive 11.5 /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.157079633}}'; 
+ros2 topic pub --once --keep-alive 23 /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}';
+ros2 topic pub --once --keep-alive 11.5 /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.157079633}}'; 
+ros2 topic pub --once --keep-alive 23 /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}'; 
+ros2 topic pub --once --keep-alive 1  /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}'
+```
