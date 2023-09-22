@@ -45,3 +45,7 @@ ros2 topic pub --once --keep-alive 11.5 /cmd_vel geometry_msgs/msg/Twist '{linea
 ros2 topic pub --once --keep-alive 23 /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}'; 
 ros2 topic pub --once --keep-alive 1  /cmd_vel geometry_msgs/msg/Twist '{linear:  {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}'
 ```
+
+##Caminos Circulares
+En la carpeta /circulos se encuentras las 4 combinaciones de signos entre velocidad angular y lineal. A forma de breve conclusion son los 4 posibles giros que podemos
+hacer con el robot ya sea horario u antihorario tanto de reversa como de frente
