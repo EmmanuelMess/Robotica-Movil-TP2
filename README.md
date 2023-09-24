@@ -11,7 +11,7 @@ bash dev/setup.sh
 
 ```bash
 docker compose build
-docker compose up
+docker compose up -d
 docker exec -it simulation_env bash
 source /opt/ros/humble/setup.bash
 . /usr/share/gazebo/setup.bash
