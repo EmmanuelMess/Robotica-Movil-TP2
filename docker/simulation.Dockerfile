@@ -11,6 +11,8 @@ RUN apt-get update && \
     ros-humble-nav2-bringup \
     ros-humble-turtlebot3* \
     ros-humble-gazebo-* \
+    ros-humble-laser-geometry \
+    ros-humble-sensor-msgs \
     ros-humble-demo-nodes-cpp \
     ros-humble-demo-nodes-py && \
     rm -rf /var/lib/apt/lists/*

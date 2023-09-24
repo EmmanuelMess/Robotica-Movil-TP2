@@ -14,6 +14,8 @@ services:
       ROS_MASTER_URI: http://rosmaster:11311
     volumes:
       - ./src:/catkin_ws/src
+      - ./tb3_empty_world/launch/tb3_simulation_launch.py:/opt/ros/humble/share/nav2_bringup/launch/tb3_simulation_launch.py
+      - ./Ejercicio 8/publish_cylinders.py:/opt/ros/humble/lib/gazebo_ros/publish_cylinders.py
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /tmp/.docker.xauth:/tmp/.docker.xauth
     ports:
